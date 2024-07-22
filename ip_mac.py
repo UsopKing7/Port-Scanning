@@ -1,6 +1,14 @@
 import nmap # type: ignore
 
 def mac_ip(ip_range):
+    
+    print(" _   _                 _  ___             ")
+    print("| | | |___  ___  _ __ | |/ (_)_ __   __ _ ")
+    print("| | | / __|/ _ \| '_ \| ' /| | '_ \ / _` |")
+    print("| |_| \__ \ (_) | |_) | . \| | | | | (_| |")
+    print(" \___/|___/\___/| .__/|_|\_\_|_| |_|\__, |")
+    print("                |_|                 |___/  \n")
+    
     scanner = nmap.PortScanner()
 
     scanner.scan(hosts = ip_range, arguments = "-sn")

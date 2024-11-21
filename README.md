@@ -37,7 +37,7 @@ chmod +x openports.py
 ```
 
 ## Instalacion de los requisitos
-# instalacion de nmap
+instalacion de nmap
 ```bash
 # para debian
 sudo apt install nmap
@@ -61,4 +61,8 @@ pip --version
 instalacion de python-nmap con pip
 ```bash
 pip install python-nmap
+```
+instalacion de colorama con pip
+```bash
+pip install colorama
 ```

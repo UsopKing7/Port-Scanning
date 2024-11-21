@@ -22,3 +22,12 @@ clonamos el repositorio
 ```bash
 git clone https://github.com/UsopKing7/Port-Scanning.git
 
+entramos al archivo clonado
+
+```bash
+cd Port-Scanning
+
+le damos permisos de ejecucion
+
+```bash
+chmod +x openports.py

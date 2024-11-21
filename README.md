@@ -17,3 +17,5 @@ Este script en Python utiliza la librería `nmap` para realizar un escaneo de pu
   - `colorama`
 
 ## Instalación
+'''bash
+   git clone https://github.com/UsopKing7/Port-Scanning.git

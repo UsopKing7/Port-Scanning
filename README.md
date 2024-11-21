@@ -67,3 +67,22 @@ instalacion de colorama con pip
 pip install colorama
 ```
 ## Uso
+```bash
+python3 openports.py
+Por favor ingresa la IP que deseas escanear: <IP>
+```
+
+## Salida
+```bash
+ _   _                 _  ___             
+| | | |___  ___  _ __ | |/ (_)_ __   __ _ 
+| | | / __|/ _ \| '_ \| ' /| | '_ \ / _` |
+| |_| \__ \ (_) | |_) | . \| | | | | (_| |
+ \___/|___/\___/| .__/|_|\_\_|_| |_|\__, |
+                |_|                 |___/ 
+ Estado:     up
+ IP: 8.8.8.8 ()
+ Protocolo:  tcp
+  Puerto:    53   Estado:   open
+  Puerto:    443   Estado:   open
+```

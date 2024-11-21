@@ -53,7 +53,7 @@ instalacion de pip
 # para debian
 sudo apt install python3-pip
 pip --version
-
+```
 ```bash
 # para arch
 sudo pacman -S python-pip

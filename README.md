@@ -15,6 +15,7 @@ Este script en Python utiliza la librería `nmap` para realizar un escaneo de pu
 - Paquetes adicionales:
   - `nmap`
   - `colorama`
+  - `pip`
 
 ## Instalación
 clonamos el repositorio
@@ -35,3 +36,26 @@ le damos permisos de ejecucion
 chmod +x openports.py
 ```
 
+## Instalacion de los requisitos
+instalacion de nmap
+
+```bash
+# para debian
+sudo apt install nmap
+```
+```bash
+# para arch
+yay -S nmap
+```
+
+instalacion de pip
+```bash
+# para debian
+sudo apt install python3-pip
+pip --version
+
+```bash
+# para arch
+sudo pacman -S python-pip
+pip --version
+```

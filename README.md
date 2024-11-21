@@ -66,3 +66,4 @@ instalacion de colorama con pip
 ```bash
 pip install colorama
 ```
+## Uso

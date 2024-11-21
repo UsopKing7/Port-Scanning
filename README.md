@@ -17,6 +17,10 @@ Este script en Python utiliza la librería `nmap` para realizar un escaneo de pu
   - `colorama`
 
 ## Instalación
-'''bash'
-   git clone https://github.com/UsopKing7/Port-Scanning.git
-'''
+## Ejemplo de Script en Bash
+
+Aquí te mostramos cómo puedes ejecutar un script Bash para realizar una tarea sencilla:
+
+```bash
+#!/bin/bash
+echo "Este es un ejemplo de un script Bash"

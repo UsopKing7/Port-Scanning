@@ -69,6 +69,7 @@ pip install colorama
 ## Uso
 ```bash
 python3 openports.py
+#salida en consla
 Por favor ingresa la IP que deseas escanear: <IP>
 ```
 

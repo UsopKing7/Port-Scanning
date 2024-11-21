@@ -1,41 +1,39 @@
 import nmap
+from colorama import Fore, init
 
-def puertos_abiertos():
-    print(" _   _                 _  ___             ")
-    print("| | | |___  ___  _ __ | |/ (_)_ __   __ _ ")
-    print("| | | / __|/ _ \| '_ \| ' /| | '_ \ / _` |")
-    print("| |_| \__ \ (_) | |_) | . \| | | | | (_| |")
-    print(" \___/|___/\___/| .__/|_|\_\_|_| |_|\__, |")
-    print("                |_|                 |___/ ")
+init(autoreset=True)
+
+def puertos_abiertos(ip):
+    print(Fore.GREEN + r" _   _                 _  ___             ")
+    print(Fore.GREEN + r"| | | |___  ___  _ __ | |/ (_)_ __   __ _ ")
+    print(Fore.GREEN + r"| | | / __|/ _ \| '_ \| ' /| | '_ \ / _` |")
+    print(Fore.GREEN + r"| |_| \__ \ (_) | |_) | . \| | | | | (_| |")
+    print(Fore.GREEN + r" \___/|___/\___/| .__/|_|\_\_|_| |_|\__, |")
+    print(Fore.GREEN + r"                |_|                 |___/ ")
 
     scanner = nmap.PortScanner()
-    scanner.scan("192.168.1.12", "1-800", arguments="-sV -O -sC -sS -T4 -Pn")
+    scanner.scan(ip, arguments="-Pn -n --open")
 
     if not scanner.all_hosts():
-        print("No se encontraron hosts activos.")
+        print(Fore.RED + "No se encontraron hosts activos.")
         return
 
     for ip in scanner.all_hosts():
-        print(f" Estado:     {scanner[ip].state()}")
+        print(Fore.YELLOW + f" Estado:     {scanner[ip].state()}")
         estado = scanner[ip].state()
 
         if estado == 'up':
-            print(f" IP: {ip} ({scanner[ip].hostname()})")
+            print(Fore.YELLOW + f" IP: {ip} ({scanner[ip].hostname()})")
             for proto in scanner[ip].all_protocols():
-                print(f" Protocolo:  {proto}")
+                print(Fore.CYAN + f" Protocolo:  {proto}")
                 lport = scanner[ip][proto].keys()
                 
                 for port in sorted(lport):
-                    print(f"  Puerto:    {port}   Estado:   {scanner[ip][proto][port]['state']}")                       
-                    producto = scanner[ip][proto][port].get('product', 'Desconocido')
-                    version = scanner[ip][proto][port].get('versions', 'Desconocido')
-                    name = scanner[ip][proto][port].get('name', 'Desconocido')
-
-                    print(f"  Producto:   {producto}")
-                    print(f"  Version:    {version}")
-                    print(f"  Nombre:     {name}")
+                    if scanner[ip][proto][port]['state'] == 'open':
+                        print(Fore.GREEN + f"  Puerto:    {port}   Estado:   {scanner[ip][proto][port]['state']}")
         else:
-            print(" La máquina está apagada")
-            exit()
+            print(Fore.RED + " La máquina está apagada")
+            return
 
-puertos_abiertos()
+ip = input(Fore.YELLOW + "Por favor ingresa la IP que deseas escanear: ")
+puertos_abiertos(ip)

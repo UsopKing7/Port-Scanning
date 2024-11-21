@@ -92,9 +92,9 @@ Por favor ingresa la IP que deseas escanear: <IP>
 Las contribuciones son bienvenidas. Si deseas mejorar este proyecto, puedes seguir estos pasos:
 
 1. Haz un fork del repositorio.
-2. Crea una rama para tu cambio (`git checkout -b feature/nueva-funcionalidad`).
-3. Realiza tus cambios y haz commit de ellos (`git commit -m 'Agregado nueva funcionalidad'`).
-4. Sube tus cambios a tu fork (`git push origin feature/nueva-funcionalidad`).
+2. Crea una rama para tu cambio 
+3. Realiza tus cambios y haz commit de ellos 
+4. Sube tus cambios a tu fork 
 5. Abre un pull request desde tu fork hacia el repositorio original.
 
 ## Soporte
